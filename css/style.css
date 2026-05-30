@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    color:#0f172a;
+    overflow-x:hidden;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 8%;
+
+    background:rgba(15,23,42,0.75);
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:white;
+}
+
+.logo-mark{
+    width:52px;
+    height:52px;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #60a5fa
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-weight:800;
+    font-size:24px;
+}
+
+.logo span{
+    color:#cbd5e1;
+    font-size:13px;
+}
+
+nav{
+    display:flex;
+    gap:36px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+    height:2px;
+
+    background:#60a5fa;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(2,6,23,.70),
+        rgba(2,6,23,.70)
+    ),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    width:90%;
+    max-width:850px;
+    margin-left:8%;
+
+    color:white;
+}
+
+.eyebrow{
+    color:#60a5fa;
+    letter-spacing:2px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:78px;
+    line-height:1.05;
+    margin-bottom:28px;
+}
+
+.hero-text{
+    max-width:650px;
+    color:#cbd5e1;
+    font-size:19px;
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:16px 34px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.3);
+    color:white;
+    text-decoration:none;
+    padding:16px 34px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    nav{
+        display:none;
+    }
+}
